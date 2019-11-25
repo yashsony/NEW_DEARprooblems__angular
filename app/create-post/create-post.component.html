@@ -1,0 +1,63 @@
+<form [formGroup]="postForm"  *ngIf="!allexpert" class="login-container" (ngSubmit)="onSubmit()">
+
+  
+  <div class="form-group">
+    <label for="exampleInputEmail1">Enter Title</label>
+    <input type="text" class="form-control form-control-lg" style="font-size:15px;" formControlName="title"  aria-describedby="emailHelp" placeholder="Enter Title">
+    
+  </div>
+  
+  
+  <app-ngx-editor  [config]="editorConfig " style=" font-size:15px; " formControlName="text"  ></app-ngx-editor>
+ 
+
+<div class="row py-4">
+
+    <div class="col-6" style="border:0px solid black;">
+
+        <label class="container">Ask With only Experts
+            <input type="checkbox" checked="checked" formControlName="ask_with_only_experts" >
+            <span class="checkmark"></span>
+          </label>
+
+    </div>
+    <div class="col-6" style="border:0px solid black;" >
+        <input class="btn btn-default btn-file" type="file" style="color :rgb(99, 22, 172);" (change)="onChange($event)" >
+      
+        
+        
+    </div>
+  </div>
+
+  
+
+
+  
+
+  
+
+ 
+
+<input type="submit" value="Submit" class="btn btn-success btn-lg float-right px-5 py-2">
+  </form>
+
+
+
+  <div *ngIf="allexpert">   
+    <h2>share with experts</h2>
+   <li *ngFor="let i of allexpert"  >
+        <ul >
+         {{i.id}}<br>
+        
+         {{i.username}}<br>
+         <input type="checkbox"  (change)="addexperts($event , i.id)">
+         
+        </ul><hr>
+          </li> 
+          <button (click)="share()">share</button>
+        </div>
+        
+
+
+
+     

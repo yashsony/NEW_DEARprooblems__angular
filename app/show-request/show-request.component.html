@@ -1,0 +1,27 @@
+<h1>
+ all request that u got!
+</h1>
+<hr><hr>
+<ul >
+  <li *ngFor="let o of requests" >
+    {{o.created_date  | date:'medium' }}<br>
+    {{o.group_name}}<br>
+    {{o.group_name_url}}<br>
+    request_id : {{o.id}}<br>
+    {{o.requestor}}<br>
+    {{o.requestor_url}}<br>
+    <button (click)="reject(o.id)">reject</button>
+    <button (click)="accept(o.id)">accept</button>
+    <hr> </li>
+ 
+</ul>
+
+
+
+
+<!-- created_date: "2019-07-27T03:35:08.950669Z"
+group_name: 4
+group_name_url: "http://127.0.0.1:8000/group/4/"
+id: 5
+requestor: 17
+requestor_url -->

@@ -1,0 +1,118 @@
+<div class=" fluid-container "id="font" style="border: 0px solid black;  ">
+  
+  <div class="navbar1 shadow">
+<div class=" fluid-container " style="width: 100% ; border:0px solid black; background-color:white;">
+  
+    <div class="d-flex container  flex-wrap  upper-navbar align-content-center  " >
+      
+      <div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 col-2 icons border-2 "  style="border : 0px solid black;padding-left: 20px;">
+        <!-- <img src="https://img.icons8.com/color/42/000000/icons8-new-logo.png"> -->
+      
+      </div>
+
+      <div style="border: 0px solid black ; " class="col-xl-7 col-lg-7 col-md-6 col-sm-6 col-8 ">
+        <div class=" d-none  d-sm-inline d-md-inline d-lg-inline d-xl-inline px-5 " >
+           <!-- <input  type="text" class="i1"  id=" "  > -->
+
+
+
+
+           <ng-template #popContent5 style="position :absolute ;">
+             <div class="row mx-0" style="border:0px solid black ; width:260px; "> 
+              <div class="col-6 text-muted text-center " (click)="change_to_user()" id="change_to_user" style="font-size:18px;-webkit-text-fill-color:#b80000;border: 0px solid black ">Users</div>
+               <div class="col-6 text-muted text-center " (click)="change_to_group()" id="change_to_group" style="font-size:18px;border: 0px solid black ">Groups</div>
+               </div><hr>
+
+               <div *ngFor="let o of user">
+                <div class="row mx-0" style="border: 0px solid black">
+                 <div class="col-2" style="border:0px solid black; padding-top: 7px;">
+                  <img src="https://qph.fs.quoracdn.net/main-qimg-285edbb5dc00cab708004a55e47e376f" height="30px" width="30px" class=" img-circle shadow"> </div>
+                   <div class="col-6 text-muted" style="border:0px solid black; padding-top: 7px;">
+                     <h4 style="margin-left: 0px;">{{o.username}}</h4> <h6 style="margin-left: 0px;">
+                      {{o.first_name}} 
+                      {{o.last_name}}</h6> <hr> </div> 
+                      <div class="col-1 text-muted"  style="border:0px solid black;"><h4>{{o.total_followers}}</h4></div>
+                      <div class="col-1 text-muted"  style="border:0px solid black;"><h4>{{o.total_following}}</h4></div>
+                      
+
+                    </div>
+
+
+                  </div>
+                   </ng-template> 
+                    
+                    <div placement="bottom" [autoClose]="'outside'" popoverClass="popoverClass" [ngbPopover]="popContent5" container="body"> <input type="text" #box (keyup.enter)="h(box.value)" class="i1"> </div>
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+
+     
+
+
+
+
+      <div class="col-xl-4 col-lg-4 col-md-5 col-sm-4 col-2 " style="border: 0px solid black;">
+        <div class="row p-3 mt-3" style="border : 0px solid black;  font-family: 'Pontano Sans', sans-serif;" >
+           <div class="col-xs-3 d-sm-none d-md-inline d-lg-inline d-xl-inline d-none text-muted "style="font-size:16px; 
+           -webkit-text-fill-color:#b30000; font-weight:bold; letter-spacing:1.2px" id="home"(click)="home()"  >Home</div>
+          <div id="updates" (click)="updates()" class="col-xs-3 d-sm-none d-md-inline d-lg-inline d-xl-inline d-none  text-muted"style="font-size:16px;font-weight:bolder; " ><span matBadge="4" matBadgeColor="warn" matBadgeSize="small" matBadgeOverlap="true">Updates</span></div>
+          <div id="create" (click)="create()" class="col-xs-3 d-sm-none d-md-inline d-lg-inline d-xl-inline d-none  text-muted"style="font-size:16px;font-weight:bolder;" >Create</div>
+          <div id="profile" (click)="profile()" class="col-xs-3 d-sm-none d-md-inline d-lg-inline d-xl-inline d-none text-muted "style="font-size:16px;font-weight:bolder;" >Profile</div>
+          <div class=" d-sm-none d-md-none d-lg-none d-xl-none d-inline icons"><img src="https://img.icons8.com/ios/24/000000/search--v1.png"></div>
+
+
+
+
+
+
+
+          <div  id="home"(click)="home()"  class="col-xs-3 d-sm-inline d-md-none d-lg-none d-xl-none d-none"><img src="https://img.icons8.com/ios/25/b30000/dog-house.png"></div>
+          <div id="updates" (click)="updates()" class="col-xs-3 d-sm-inline d-md-none d-lg-none d-xl-none d-none" ><img src="https://img.icons8.com/ios/25/000000/appointment-reminders.png"></div>
+          <div id="create" (click)="create()" class="col-xs-3 d-sm-inline d-md-none d-lg-none d-xl-none d-none"><img src="https://img.icons8.com/ios/27/000000/add.png"></div>
+          <div id="profile" (click)="profile()" class="col-xs-3 d-sm-inline d-md-none d-lg-none d-xl-none d-none"><img src="https://img.icons8.com/ios/28/000000/user-male-circle.png"></div>
+
+
+
+
+
+
+        </div>
+      </div>
+  
+      
+    
+    </div>
+  
+</div>
+</div>    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="border: 2px solid grey; background-color:white"class="navbar  d-sm-none d-md-none d-lg-none d-xl-none d-inline">
+  <div class="row align-items-center lower-navbar " style="border : 0px solid black; width: 100% ; " >
+    <div id="home" (click)="home()" class="col-3  d-sm-none d-md-none d-lg-none d-xl-none d-inline text-center icons "><img src="https://img.icons8.com/ios/25/b30000/dog-house.png"></div>
+   <div  id="updates" (click)="updates()" class="col-3  d-sm-none d-md-none d-lg-none d-xl-none d-inline text-center icons "><img src="https://img.icons8.com/ios/25/000000/appointment-reminders.png"></div>
+   <div id="create" (click)="create()" class="col-3  d-sm-none d-md-none d-lg-none d-xl-none d-inline text-center icons "><img src="https://img.icons8.com/ios/27/000000/add.png"></div>
+   <div id="profile" (click)="profile()" class="col-3  d-sm-none d-md-none d-lg-none d-xl-none d-inline text-center icons "><img src="https://img.icons8.com/ios/28/000000/user-male-circle.png"></div>
+
+ </div>
+
+</div>

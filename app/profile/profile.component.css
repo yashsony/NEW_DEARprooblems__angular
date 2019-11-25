@@ -1,0 +1,341 @@
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index:5;
+    margin :0px;
+    
+  }
+  .CONT-AINER{
+    margin-top:100px;
+    
+  }
+   #like_hover_1:hover{
+    content:url("https://img.icons8.com/ios/30/b30000/25.png");
+    
+  } #like_hover_2:hover{
+    content:url("https://img.icons8.com/ios/30/b30000/50.png");
+    
+  } #like_hover_3:hover{
+    content:url("https://img.icons8.com/ios/30/b30000/75.png");
+    
+  } #like_hover_4:hover{
+    content:url("https://img.icons8.com/ios/30/b30000/100.png");
+    
+  }
+  .my-custom-class {
+    /* background: #ff6b6b; */
+   border: 0px solid black;
+   margin-bottom: 20px;
+   padding: 10px;
+   padding-left: 17px;
+   padding-right: 17px;
+   /* margin : 13%; use media query*/ 
+   z-index: 2;
+   box-shadow: #555555;
+    font-size: 125%;
+  }
+  .my-custom-class .arrow::after {
+    border-top-color: aliceblue;
+  }
+  .i1[type=text] {
+    width: 180px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    
+    background-color: white;
+    background-image: url('https://img.icons8.com/ios/27/777777/search-for-love.png');
+    
+    background-position-x: center ;
+      
+      background-position-y:  5px;  
+    
+    background-repeat: no-repeat;
+    padding: 9px 0px 9px 20px;
+    margin-left : 28%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+
+  
+  .i1:focus {
+    width: 50%;
+    background-image: url('https://img.icons8.com/ios/27/b30000/search-for-love.png');
+    /* box-shadow: none; */
+    background-position-x: right;
+    border : 2px solid  #aaaaaa ;
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+  }
+  .i1:hover {
+    width: 50%;
+    background-position-x: right ;
+    background-image: url('https://img.icons8.com/ios/27/b30000/search-for-love.png');
+  
+
+  }
+  .main_post{
+
+    margin-bottom: 40px; 
+  }
+  .navbar1 {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:3;
+  }
+.left-box{
+  margin-left:15px;
+  width:160px;
+}
+.right-box{
+  margin-left:875px;
+  width:280px; 
+}
+  .both-box{
+    overflow: hidden;
+    position: fixed;
+    top:100px;
+    /* z-index:1; */
+    /* we changed z-index from 3 to 0.my-custom-class {
+      background: aliceblue;
+      font-size: 125%;
+    }
+    .my-custom-class .arrow::after {
+      border-top-color: aliceblue;
+    }   */
+
+    
+  }
+  .upper-navbar{
+
+    height:70px ; 
+    padding : 0px;
+  }
+  .lower-navbar{
+    height: 40px;
+  }
+  .icons{
+     color : black ;
+      
+  }
+  .date{
+    
+    position: absolute; 
+    top:17px; 
+    left :  27px;
+    font-size:10px; 
+    margin-right:0px ;
+
+  }
+
+
+  .content {
+    font-family:  cursive; 
+    font-size : 16px; 
+    font-stretch: extra-expanded ;
+    word-spacing: 3px;
+    padding: 30px;
+    padding-top: 0px;
+   }
+   .title{
+     font-size : 20px; 
+     font-family:  cursive;
+     padding-top: 35px;
+     color: #555555 ;
+     padding-left : 20px;
+      padding-right: 20px;
+   }
+   #sizeofimage{
+    height:150px;
+    width:150px;
+  }
+   @media(max-width:450px){
+    #sizeofimage{
+      height:90px;
+      width:90px;
+    }
+   }
+   @media (max-width: 1200px){
+    .right-box {
+    margin-left:740px;
+    width:250px;
+    }
+  }
+  
+  @media (max-width: 769px){
+    #fck{
+      display: none;
+    }
+    .i1[type=text] {
+      
+      margin-right : 100px;
+      width : 150px;
+    margin-top: 10px;
+    
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    
+    background-color: white;
+    background-image: url('https://img.icons8.com/ios/27/777777/search-for-love.png');
+    
+    background-position-x: right ;
+      
+      background-position-y:  5px;  
+    
+    padding: 7px 0px 7px 10px;
+  
+      }
+    .date {
+      left :  25px;
+    }
+    .i1:focus {
+      width: 50%;
+      background-image: url('https://img.icons8.com/ios/27/b30000/search-for-love.png');
+      /* box-shadow: none; */
+      background-position-x: right;
+      border : 2px solid  #aaaaaa ;
+      outline:0px !important;
+      -webkit-appearance:none;
+      box-shadow: none !important;
+    }
+    .i1:hover {
+      width: 50%;
+      background-position-x: right ;
+      background-image: url('https://img.icons8.com/ios/27/b30000/search-for-love.png');
+    
+  
+    }
+    
+  
+}
+  @media (max-width: 991px){
+    #fck1{
+      display: none;
+    }
+    .i1[type=text]{
+      
+      margin-left :10%;
+      padding: 7px 0px 7px 10px;
+      }
+
+    .date {
+      left :  10px;
+    }
+    .title{
+      font-size : 16px; 
+      font-family:  cursive;
+      padding-top: 30px;
+      
+    }
+    .content{
+      font-family:  cursive; 
+   font-size : 14px; 
+   font-stretch: extra-expanded ;
+   word-spacing: 2px;
+   padding: 25px;
+   padding-top : 0px;
+    }
+      .right-box {
+        margin-left:500px;
+        width:250px;
+        }
+        
+  }
+  @media (max-width: 375px){
+  
+    .date {
+      
+      font-size : 9px ;
+      
+    }
+    
+  }
+  @media (max-width: 339px){
+  
+    .date {
+      top : 9px;
+      
+    }
+    
+  }
+  @media (max-width: 1200px){
+  
+    .left-box {
+      margin-left: -20px;
+      
+    }
+    
+    
+  }
+  #for_hide{
+    display: block;
+}
+  @media (max-width: 769px){
+ 
+  #for_hide{
+    display: none;
+}
+  }
+    @media (max-width: 576px){
+      .title{
+        font-size : 14px; 
+        font-family:  cursive;
+        padding-top: 20px;
+        
+      }
+      
+      .content{
+        font-family:  cursive; 
+     font-size : 12px; 
+     font-stretch: extra-expanded ;
+     word-spacing: 2px;
+     padding: 7px;
+     padding-top : 0px;
+      }
+      .date {
+        left :  0px;
+      }
+      .upper-navbar{
+
+        height:50px ; 
+      }
+      .CONT-AINER{
+        margin-top:65px;
+        
+      }
+    
+
+  }
+  #font{
+    font-family: 'Bitter', serif;
+  }
+  .border-2{
+
+    border: 1px solid black;
+  }
+
+.middle{
+  position: absolute;
+   top : 30%;
+  left: 37%; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 0px;
+  -webkit-text-fill-color: #555555;
+  
+}
+
+.image{
+  position: relative;
+
+}
+
+ 
+  
+  

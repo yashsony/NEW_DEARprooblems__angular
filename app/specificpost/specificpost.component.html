@@ -1,0 +1,46 @@
+<!-- id": 7,
+    "created_by": "yash",
+    "created_by_url": "http://127.0.0.1:8000/user/1/",
+    "post_url": "http://127.0.0.1:8000/post/7/",
+    "like_set": [],
+    "comment_set": [],
+    "post_name": [],
+    "experts_n": [],
+    "title": "y",
+    "text": "h",
+    "created_time": "2019-08-03T16:41:52.260352Z",
+    "edited_time": "2019-08-03T16:41:52.260352Z",
+    "photo": "http://127.0.0.1:8000/media/post_by_user_1/home_xqnZ63h.jpeg",
+    "points": 0,
+    "ask_with_only_experts": true,
+    "user": 1 -->
+<hr>
+{{post.id}}<br>
+{{post.created_by}}<br>
+{{post.created_by_url}}<br>
+{{post.post_url}}<br>
+<!-- {{post.like_set}}<br>
+{{post.comment_set}}<br>
+{{post.post_name}}<br>
+{{post.experts_n}}<br> -->
+{{post.title}}<br>
+{{post.text}}<br>
+{{post.created_time  | date:'medium'}}<br>
+{{post.edited_time  | date:'medium' }}<br>
+<!-- {{post.photo}}<br> -->
+<img [src]= "post.photo" class="img-thumbnail" height="300px" width="300px" >
+<br>
+{{post.points}}<br>
+{{post.user}}<br>
+
+<form [formGroup]="commentForm" class="login-container" (ngSubmit)="comment(post.id)">
+    <input type="radio" value="C" formControlName="type"> comment
+          <input type="radio" value="S" formControlName="type" > suggestion
+          
+
+  <input type="text" placeholder="something" formControlName="opinion">
+
+  <input type="submit" value="comment">
+
+</form>
+

@@ -1,0 +1,15 @@
+<h2 class="login-header">Log in</h2>
+<form [formGroup]="signupForm" style=" margin-top: 300px;"class="login-container" (ngSubmit)="signup()">
+
+  
+    <input type="username" placeholder="username" formControlName="username">
+
+  
+    <input type="password1" placeholder="Password1" formControlName="password1">
+ 
+    <input type="password2" placeholder="Password2" formControlName="password2">
+
+
+    <input type="submit" value="sign up">
+ 
+    </form>

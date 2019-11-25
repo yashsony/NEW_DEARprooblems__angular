@@ -1,0 +1,60 @@
+<div class="container">
+<div class="display-2">{{u.username}}</div>
+<br><br>
+<h4><button (click)="follow(u.id)">follow</button></h4>
+{{u.id}}<br>
+{{u.url_for_detail_view}}<br>
+
+{{u.total_following}}<br>
+
+{{u.total_followers}}<br>
+
+{{u.last_login | date:'medium' }}<br>
+
+{{u.username}}<br>
+
+{{u.first_name}}<br>
+
+{{u.last_name}}<br>
+
+{{u.email}}<br>
+photo is here
+<!-- {{u.user_name_for_profile.profile_photo}}<br> -->
+{{u.is_active}}<br>
+
+{{u.date_joined | date:'medium'  }}<br>
+<h2>all groups</h2>
+<li *ngFor="let i of u.groups" >
+    <ul>
+     {{i.id}}<br>
+     {{i.url}}<br>
+     {{i.total_members}}<br>
+     {{i.name}}<br>
+    </ul>
+ </li> 
+ <h2>all followers</h2>
+ <li *ngFor="let i of u.followers" >
+    <ul>
+     {{i.created_date}}<br>
+     {{i.follower}}<br>
+    
+    </ul>
+ </li> 
+
+ <h2>all following</h2>
+ <li *ngFor="let i of u.following" >
+    <ul>
+     {{i.created_date}}<br>
+     {{i.following}}<br>
+    
+    </ul>
+ </li> 
+
+
+
+
+
+
+
+
+</div>

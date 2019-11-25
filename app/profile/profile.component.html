@@ -1,0 +1,115 @@
+
+<div class="container ">
+  <div class="row " style="margin-top:100px; height:auto;  padding-top: 30px; " >
+  
+      <div class="col-xl-3  col-lg-3 col-md-2  col-sm-1  "id="for_hide" style="border: 0px solid  black;"></div>
+      <div class="col-xl-6  col-lg-6 col-md-8  col-sm-11 col-xs-12 col-12 " style="border: 0px solid  red; background-color: white ; ">
+         
+          <div class="row align-items-center"style="border:0px solid  black;">
+              <div class="col-4" style="border: 0px solid  black;">
+                <span *ngIf="user_info.user_name_for_profile != null ; else default_user_image">
+                  <img [src]="user_info.user_name_for_profile['profile_photo'] " id="sizeofimage" style="border : 1px solid #bbbbbb;" class="mt-2   img-circle  shadow-lg" >
+            
+                  </span>
+              
+                  <ng-template #default_user_image>
+                      <img src="data:image/png;base64,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" height="80px" width="80px"  style="border : 1px solid #bbbbbb;" class="mt-2   img-circle  shadow-lg">
+                       
+                      </ng-template>
+          
+                
+              </div>
+              <div class="col-8 text-center " style="border: 0px solid  black;">
+              <div class="text-muted">  <h3>{{user_info.username}}</h3> </div>
+              
+              <div class="text-muted "> <h2>{{user_info.first_name}} {{user_info.last_name}}  </h2> </div>
+              
+  
+  <div class="row mt-5">
+  <div class="col-4"style="border : 0px solid #bbbbbb;font-size:14px; -webkit-text-fill-color:#b30000 ">Followers</div>
+  <div class="col-4"style="border : 0px solid #bbbbbb;font-size:14px; -webkit-text-fill-color:#b30000">Following</div>
+  
+  <div class="col-4"style="border : 0px solid #bbbbbb;font-size:14px; -webkit-text-fill-color:#b30000">Groups</div>
+  
+  </div>
+  
+  <div class="row text-dark" style="">
+      <div class="col-4 text-muted"style="border : 0px solid #bbbbbb;font-size:25px;">{{user_info.total_followers}}</div>
+      <div class="col-4 text-muted"style="border : 0px solid #bbbbbb;font-size:25px;">{{user_info.total_following}}</div>
+      
+      <div class="col-4 text-muted"style="border : 0px solid #bbbbbb;font-size:25px;">{{user_info.total_posts}}</div>
+      
+      </div>
+  
+  
+  
+  
+  
+  
+  
+      
+     
+  
+              </div>
+              
+        
+            </div>
+          
+            <div class="row mt-4 pt-4"style="border-top:2px solid #dddddd">
+              <div class="col-6 text-center text-dark" style="font-size:14px;"><h3>Posts</h3></div>
+              <div class="col-6 text-center text-dark"style="font-size:14px;"><h3>Activity</h3></div>
+  
+            </div>
+              <div class="row d-flex justify-content-center" style="border:0px solid green ;" >
+            <span *ngFor="let i of user_post" style="border:0px solid yellow ; padding:0px;" class="mx-4 my-4" >
+                
+                
+                  <div class="card shadow-lg text-center" style="width:200px;">
+                    <img class="card-img-top image " (mouseenter)="mouseHover(i.id)"  (mouseleave)="mouseLeave(i.id)"   [src]="i.photo" alt="Card image cap">
+                    <div class="middle">
+                      <div class="text" id={{i.id}} >{{i.points}}</div>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">{{i.title}}</h5>
+                      <p class="card-text">{{i.text}}</p>
+                      
+
+                      <!-- <span *ngIf="i !=3 ; else default_user_image">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </span> -->
+                    <!-- <ng-template #default_user_image>
+                        <p class="card-text">Some quick example text to build on the card Some quick example text to build on the card Some quick example text to build on the card Some quick example text to build on the card Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                         
+                        </ng-template> -->
+                      
+                    </div>
+                  
+                
+                </div>
+            
+                  
+              </span>
+              
+                </div>
+      
+      
+      </div>
+      <div class="col-xl-3  col-lg-3 col-md-2  col-sm-1  " id="for_hide" style="border: 0px solid  black;"></div>
+  
+      
+
+
+          
+  
+    </div>
+
+  
+
+
+
+    
+
+
+  </div>
+ 
+  

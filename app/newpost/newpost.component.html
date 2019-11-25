@@ -1,0 +1,560 @@
+
+<div class="container CONT-AINER " style=" height:auto;">
+
+  <div class="row " style=" position: relative;border: 0px solid black" >
+    <div class="col-xl-2 col-lg-2 " ></div>
+    <div class= "both-box left-box shadow" style="border:0px solid black;  margin-top: 30px; " id="fck1">
+  <div >
+  
+    <div class="card box-shadow " style="width:100%;   ">
+        <div class="card-header text-center " style="background-color:#fdfdfd ;">
+
+            <span *ngIf="user_info.user_name_for_profile != null ; else default_user_image">
+                <img [src]="user_info.user_name_for_profile['profile_photo'] " style="border:1px solid #bbbbbb"  height="80px" width="80px"  style="border : 1px solid #bbbbbb;" class="mt-2   img-circle  shadow-lg" >
+          
+                </span>
+            
+                <ng-template #default_user_image>
+                    <img src="data:image/png;base64,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" height="80px" width="80px"  style="border : 1px solid #bbbbbb;" class="mt-2   img-circle  shadow-lg">
+                     
+                    </ng-template>
+          
+            <h4 class="mt-4 mx-3 " style="columns: #999999;">{{user_info.username}}</h4>
+</div>
+<div class="card-body">
+        <ul class="list-unstyled mt-4 ">
+            <li class="text-muted text-center" style="font-size:13px; margin-top: -13px;  -webkit-text-fill-color: #b30000;">Followers</li>
+            <li class=" text-center" style="font-size:25px;">{{user_info.total_following}}</li><hr>
+            <li class="text-muted text-center py-1" style="font-size:13px; -webkit-text-fill-color: #b30000;">Following</li>
+            <li class="   text-center" style="font-size:25px;">{{user_info.total_followers}}</li><hr>
+            <li class="text-muted  text-center py-1" style="font-size:13px; -webkit-text-fill-color: #b30000;">Total Posts</li>
+            <li class=" text-center" style="font-size:25px;">{{user_info.total_posts}}</li>
+            
+            
+
+        </ul>
+        
+    </div>
+</div>
+</div>
+    </div>
+
+
+
+   
+<div class="col-xl-7  col-lg-7 col-md-8  col-sm-12 col-xs-8 col-12 " style="border :0px solid black ; " >
+
+
+
+
+
+
+
+
+
+  <cdk-virtual-scroll-viewport [itemSize] = "12"id="ghjk" >
+
+
+
+
+  
+  
+
+  <div *cdkVirtualFor="let i of allposts" >
+
+
+
+
+<div class="row card main_post shadow mb-5" style="height:auto; overflow :hidden; margin :5px ; ">
+    <div class="card-header" style="background-color: #fdfdfd;"> 
+      <div class="row " style="height:50px; width:100%; ">
+        <div class="col-10 " style="border: 0 px solid yellow ; position: relative;">
+            <!-- <span *ngIf="i.user_name_for_profile != null ; else default_user_image">
+                <img [src]="i.user_name_for_profile['profile_photo'] " style="border:1px solid #bbbbbb" height="40px" width="40px" class="imgclass shadow img-circle" >
+          
+                </span> -->
+                <span *ngIf="i.user.user_name_for_profile != null ; else default_user_image">
+            <img [src]="i.user.user_name_for_profile.profile_photo" height="40px" width="40px" class="img-circle border  " style="position: absolute;top:6px;">
+          </span>
+          <ng-template #default_user_image>
+              
+            <img src="https://www.the11best.com/wp-content/uploads/2015/06/54bc0b3d23f26_-_hbz-selfie-03-angle-down-lg.jpg" height="40px" width="40px" class="img-circle border  " style="position: absolute;top:6px;">
+               
+              </ng-template>
+            <div style="position: absolute; top:15px; left:75px ;font-size:15px; -webkit-text-fill-color:black; letter-spacing:0.7px;" class="text-grey">{{i.created_by  }}</div>
+        </div>
+        <div class="col-2  "  style="position: relative; ">
+            <div  class="text-muted date "> {{i.created_time | date:'short' }}</div>
+        </div>  
+      </div>
+    </div>
+  
+
+      <div class="card-body px-0 py-0">
+          <img [src]= "i.photo" class="img-fluid "width="100%" height="100%" style="margin-bottom:0px;">
+          <div class="container " >
+          <div class="  text-center title " >{{i.title}}
+      
+          </div><hr>
+      
+          <div class="text-center text-muted content"> 
+            <p >{{i.text}}
+          </p></div>
+          
+        
+        </div>
+        
+  </div>
+  
+  <div class="card-header  " style="border-top : 4px  solid #dddddd ;   height : 60px ; padding-top :  8px  ; background-color : #fefefe;"> 
+ <div class="row justify-items-center ">
+
+    <div class="col-lg-8 col-sm-7 col-6 text-muted " id ="wert">
+     <div class="ml-3 mt-1">
+      <i style="color:#b80000;">Points</i>
+      <h2 id={{i.id}}>{{i.points}}</h2> 
+     </div>
+
+
+
+
+    </div>  
+    
+
+<div class="col-lg-4 col-sm-5  col-5 ">
+  <div class="row ">
+       <div class="col-4">
+
+
+
+
+        <ng-template #popContent  style="position : absolute ;">  
+
+          <div id="myForm "   >
+             <div >
+                <form action="/echo/html/" id="popForm" method="get">
+                  <div class="row">
+               
+                    <div class="col-3">
+                      <img src="https://img.icons8.com/ios/30/000000/25.png" (click)="like('N')" id="like_hover_1"> 
+                    </div>
+                    
+                    <div class="col-3">
+                      <img src="https://img.icons8.com/ios/30/000000/50.png" (click)="like('G')" id="like_hover_2">
+                      
+                    </div>
+                    <div class="col-3">
+                      <img src="https://img.icons8.com/ios/30/000000/75.png" (click)="like('V')" id="like_hover_3">
+                      
+                    </div>
+                    <div class="col-3">
+                      <img src="https://img.icons8.com/ios/30/000000/100.png" (click)="like('E')" id="like_hover_4">
+                      
+                    </div>
+                  </div>
+              </form>
+             </div>
+          </div>
+          
+
+
+      </ng-template>
+      <button  class="btn  mr-2 " placement="top-right"  [autoClose]=true  popoverClass="my-custom-class"
+      [ngbPopover]="popContent"   container="body" (click)="take_id_like(i.id)">
+      <img src="https://img.icons8.com/ios/25/b30000/gas.png">
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>  
+       
+       <div class="col-4">
+      
+        <ng-template #popContent2  style="position : absolute ;   ">  
+
+          <div id="myForm "   >
+             <div >
+                
+                 
+
+
+
+
+
+                  
+                  
+
+                 
+                    
+                  <div class="my-3">
+                      <div class="row " style="padding-top : 0px;">
+                          <div class="col-3"  style="border:0px solid black; padding-top: 5px;"><img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"  height="30px" width="30px"  class=" img-circle shadow">
+                            </div>
+                          <div class="col-9 text-muted" style="border:0px solid black; padding-top: 7px;"><h4>Yash Soni</h4>
+                          <hr>
+                            
+                          </div>
+                       
+                      
+                    
+                    </div>
+                    <div class="row">
+
+                  
+                        <div class="col-12 text-muted"><p style="font-size:15px;">this is my cuyikuyikujkuy yhyrtyryr omment</p></div>
+                      </div>
+                  </div>
+                    
+                    <hr>
+                   
+
+                    <!-- <form [formGroup]="commentForm" class="login-container" (ngSubmit)="comment(post.id)">
+                      <input type="radio" value="C" formControlName="type"> comment
+                            <input type="radio" value="S" formControlName="type" > suggestion
+                            
+                  
+                    <input type="text" placeholder="something" formControlName="opinion">
+                  
+                    <input type="submit" value="comment">
+                  
+                  </form> -->
+
+
+                    <form [formGroup]="commentForm"  (ngSubmit)="comment()" >
+                      <mat-radio-group aria-label="Select an option"  formControlName="type" >
+                          <div class="row mb-2" >
+                          
+
+                          <div class="col-6">  
+                               <mat-radio-button value="C"  ><h4>comments</h4> </mat-radio-button>
+                               </div>
+                          <div class="col-6">
+                                 <mat-radio-button value="S"  ><h4>suggestion</h4></mat-radio-button>
+                                </div>
+                          
+                        </div>
+                        </mat-radio-group>
+                       
+                        
+                        
+                          
+                      
+                        <div class="row" style="margin:-8px; margin-top:10px;" >
+                            <div class="col-9 " style="padding:0; border: 0px solid black;">
+                              
+                            
+                              <input type="text"    placeholder="Add Comment" style="padding-top:5px;padding-bottom:5px;  width:100%"  formControlName="opinion">
+                            </div>
+                            <div class="col-3"style="border: 0px solid black ; margin:0px; padding:0px;">
+                    <input type="submit" style="width:100%; height:100%"  value="comment">
+
+                            </div>
+                            
+                           
+                          
+                   
+                   
+                      </div>
+              </form>
+             </div>
+          </div>
+          
+
+
+      </ng-template>
+      
+      
+      
+      
+        <button  class="btn  mr-2 " placement="top-right" [autoClose]="'outside'"   popoverClass="my-custom-class"
+        [ngbPopover]="popContent2"   container="body" (click)="take_id_comments(i.id)">
+        <img src="https://img.icons8.com/ios/25/b30000/comments.png">
+  </button>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      </div>  
+      <ng-template #popContent3  style="position : absolute ; ">  
+
+          <div id="myForm "   >
+             <div >
+                <form action="/echo/html/" id="popForm" method="get">
+
+<!-- Search button should be there  -->
+                  <!-- <div class="row" style="margin-top: 0px; padding: 10px">
+                      <div class="col-9 " style="border:0px solid black; padding: 0px;">
+                            <div class="input-group input-group-lg">
+                          <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"
+             placeholder="Search User and group " style="margin-left:0px;">
+                        </div>
+                        </div>
+                        <div class="col-3 m-0"style="border:0px solid black;padding: 0px;">
+                          <button style="width:100%; height:100%;">search</button>
+                        </div>
+                         </div>
+                        
+                        "id": 3,
+            "user_name_for_profile": {
+                "profile_photo": "http://127.0.0.1:8000/media/userpic_3/back.png"
+            },
+            "username-->
+
+
+                        <div class="m-0"> <h3>Users</h3>
+                          <hr>
+                         <div *ngFor = "let i of all_list_of_g_and_f[1]">
+                            
+                                     <div class="row" style="padding:0px; margin:-8px; ">
+                              
+                                  
+                                      <div class="col-3"  style="border:0px solid black; padding-top: 5px;"><img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"  height="30px" width="30px"  class=" img-circle shadow">
+                                        </div>
+                                      <div class="col-7 text-muted" style="border:0px solid black; padding-top: 7px;"><h4>{{i.username}}</h4>
+                                      <hr>
+                                        
+                                      </div>
+                                
+                                      <div class="col-2"  style="border:0px solid black; padding-top: 5px;">
+                                          <input type="checkbox"  (change)="addgroups($event , i.id)">
+                                      </div>
+                                  </div>    
+                                
+                                </div><!--end loop-->
+                     
+                    </div>
+
+                    <div style="margin-top: 10px;"> <h3>Groups</h3>
+                      <hr>
+                      <div *ngFor = "let i of all_list_of_g_and_f[0]">
+                        
+                                 <div class="row" style="padding:0px;margin:-8px; ">
+                          
+                              
+                                  <div class="col-3"  style="border:0px solid black; padding-top: 5px;"><img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"  height="30px" width="30px"  class=" img-circle shadow">
+                                    </div>
+                                  <div class="col-7 text-muted" style="border:0px solid black; padding-top: 7px;"><h4>{{i.name}}({{i.total_members}})</h4>
+                                  <hr>
+                                    
+                                  </div>
+                            
+                                  <div class="col-2"  style="border:0px solid black; padding-top: 5px;">
+                                      <input type="checkbox"  (change)="adduser($event , i.id)">
+                                  </div>
+                                    </div>
+                 </div>
+                <div class="row my-3">
+                <div class="col-8"></div>
+                <div class="col-4"> <button style="width:100%; height:100%"  (click)="share($event)">share</button></div>
+                </div>
+                </div>
+
+
+
+
+
+
+             
+             
+              
+              </form>
+             </div>
+          </div>
+          
+
+
+      </ng-template>
+      
+      <div class="col-4">
+          <button  class="btn  mr-2 " (click)="openDialog(i.id)" placement="top-right"  [autoClose]="'outside'"  popoverClass="my-custom-class"
+          [ngbPopover]="popContent3"   container="body"><img src="https://img.icons8.com/ios/25/000000/right2.png">  
+  </button>
+</div>
+  </div>
+</div>
+
+    
+ </div>
+
+  </div>
+
+
+</div>
+
+
+
+
+</div>
+<!-- end loop -->
+
+
+
+
+
+  
+
+
+</cdk-virtual-scroll-viewport>
+
+
+
+
+
+
+
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-xl-3 col-lg-3  col-md-4     col-xs-4 " style="border: 0px solid  black; " >
+</div>
+<div id="fck" class="both-box right-box shadow " style=" margin-top: 30px;">
+   
+
+<div class="card box-shadow  " >
+    <div class="card-header" style="background-color: #ffffff">
+        <h4 class="font-weight-normal  text-muted text-center py-2" > Users</h4>
+     </div>
+     
+     <div class="card-body ">
+      <div class="row  my-3 text-center "  id="" style="border:0px solid black" >
+        
+        
+        <div class="col-3  text-center "  *ngFor="let i of suggested_users"  style="border:0px solid black; display: inline-block;" id="suggested_users_1">
+
+          <span *ngIf="i.user_name_for_profile != null ; else default_user_image">
+          <img [src]="i.user_name_for_profile['profile_photo'] " style="border:1px solid #bbbbbb" height="40px" width="40px" class="imgclass shadow img-circle" >
+    
+          </span>
+          {{i.username}}
+
+          <ng-template #default_user_image>
+          <img src="https://www.the11best.com/wp-content/uploads/2015/06/54bc0b3d23f26_-_hbz-selfie-03-angle-down-lg.jpg" style="border:1px solid #bbbbbb" height="40px" width="40px" class="imgclass shadow img-circle" >
+           
+          </ng-template>
+      
+          <button  type="button" (click)="follow(i.id , $event)" class="btn  btn-danger  mt-2  " style="font-size:10px; border-radius:10px; padding-left: 5px ; padding-right: 5px; ">
+          <b>Follow</b>
+        </button>
+        </div>
+
+      
+       
+      
+
+        <div class="col-3 pt-4"><img src="https://img.icons8.com/ios-glyphs/30/999999/chevron-right.png" id="btnsubmit" (click)="next_suggested_users()" ></div>
+    </div>
+
+
+    </div>
+
+</div>
+<div >
+
+
+<div class="card box-shadow ">
+
+    <div class="card-header" style="background-color: #ffffff">
+        <h4 class="font-weight-normal  text-muted text-center py-2" >Groups</h4>
+     </div>
+     
+     <div class="card-body ">
+      <div class="row  my-3 text-center" >
+        <div class="col-3 " *ngFor="let i of suggested_groups"  >
+            <span *ngIf="i.user_name_for_profile != null ; else default_user_image">
+                <img [src]="i.user_name_for_profile['profile_photo'] " style="border:1px solid #bbbbbb" height="40px" width="40px" class="imgclass shadow img-circle" >
+          
+                </span>
+                {{i.name}}
+                <ng-template #default_user_image>
+                    <img src="https://www.the11best.com/wp-content/uploads/2015/06/54bc0b3d23f26_-_hbz-selfie-03-angle-down-lg.jpg" style="border:1px solid #bbbbbb" height="40px" width="40px" class="imgclass shadow img-circle" >
+                     
+                    </ng-template>
+        <button type="button" (click)="request_to_join(i.id , $event)" class="btn btn-sm btn-danger mt-2 px-3" style="border-radius:10px;"  ><img src="https://img.icons8.com/metro/15/ffffff/plus-math.png"></button>
+        </div>
+        
+
+        <div class="col-3 pt-4"><img src="https://img.icons8.com/ios-glyphs/30/999999/chevron-right.png"  (click)="next_suggested_groups()" ></div>
+    </div>
+     </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+

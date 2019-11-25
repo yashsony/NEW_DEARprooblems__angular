@@ -1,0 +1,83 @@
+<h2 class="login-header">post create</h2>
+
+
+
+<form [formGroup]="postForm" class="login-container" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-sm-2"></div>
+<div class="col-sm-8">
+  <input type="text" placeholder="title" formControlName="title" value="text">
+</div>
+<div class="col-sm-2"></div>
+    
+</div>
+    <input type="text" placeholder="text" formControlName="text" value="title">
+   ask with expert :<input type="checkbox"  formControlName="ask_with_only_experts"  >
+
+   
+  <label for="file">Choose File</label>
+  <input type="file" (change)="onChange($event)">
+  <input type="submit" value="sign up">
+    </form>
+    <br>
+    
+<div *ngIf="allexpert">   
+    <h2>share with experts</h2>
+   <li *ngFor="let i of allexpert"  >
+        <ul >
+         {{i.id}}<br>
+        
+         {{i.username}}<br>
+         <input type="checkbox"  (change)="addexperts($event , i.id)">
+         
+        </ul><hr>
+          </li> 
+          <button (click)="share()">share</button>
+        </div>
+        
+
+    
+    
+<hr><hr>
+    <li *ngFor="let i of allposts"  >
+      <ul >
+       {{i.id}}<br>
+       {{i.created_by  }}<br>
+       {{i.post_url}}<br>
+       {{i.text}}<br>
+       {{i.created_time | date:'medium' }}<br> 
+       <h3 (click)="detailpost(i.id)">{{i.title}}<br></h3>
+       <br>
+       <img [src]= "i.photo" class="img-thumbnail" height="300px" width="300px" >
+       <br>{{i.user}}<br>
+       {{i.points}}<br>
+
+
+       
+
+       <form [formGroup]="likeForm" class="login-container" (ngSubmit)="like(i.id)">
+    
+          <input type="radio" value="N" formControlName="gender"> nice
+          <input type="radio" value="G" formControlName="gender" > good
+           <input type="radio" value="V" formControlName="gender" > very good
+           <input type="radio" value="E" formControlName="gender" > exellent
+        
+          <input type="submit" value="like">
+        
+        </form>
+        <ol>
+          <li>
+          
+          </li>
+          <li>
+            <button mat-raised-button (click)="openDialog(i)">Pick one</button>
+          </li>
+         
+        </ol>
+
+      
+             
+      </ul><hr>
+        </li> 
+
+       

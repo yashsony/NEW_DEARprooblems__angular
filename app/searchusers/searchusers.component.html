@@ -1,0 +1,35 @@
+<!-- "id": 17,
+"url_for_detail_view": "http://127.0.0.1:8000/user/17/",
+"user_name_for_profile": null,
+"total_following": "0",
+"total_followers": "0",
+"username": "karan",
+"first_name": "",
+"last_name": "" -->
+
+<div class="container">
+    <h2>ALL userS</h2>
+    <i>press enter for search</i><br>
+    <input #box (keyup.enter)="h(box.value)" placeholder="type here"> 
+    <button (click)="h(box.value)">search</button>
+    <br><br>
+    <ul *ngFor="let o of user" >
+      <li (click)="goto(o.id)">
+        {{o.id}}<br>
+        {{o.url_for_detail_view}}<br>
+      
+        <span *ngIf="o.user_name_for_profile != null">
+          <img [src]="o.user_name_for_profile['profile_photo'] " height="200px" width="300px">
+       
+        </span>
+        <br>
+        {{o.total_following}}<br>
+        {{o.total_followers}}<br>
+        {{o.username}}<br>
+        {{o.first_name}}<br>
+        {{o.last_name}}<br>
+        
+        <hr> </li>
+     
+    </ul>
+    </div>

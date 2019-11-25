@@ -1,0 +1,78 @@
+
+
+
+
+
+
+
+
+
+
+
+<div style="margin-left:100px;">
+  <h1>post</h1>
+
+  {{data.i.id}}<br>
+  {{data.i.created_by  }}<br>
+  {{data.i.post_url}}<br>
+  {{data.i.text}}<br>
+  <h3 (click)="detailpost(i.id)">{{data.i.title}}<br></h3>
+  <br>
+  <img [src]= "data.i.photo" class="img-thumbnail" height="300px" width="300px" >
+  <br>{{data.i.user}}<br>
+  {{data.i.points}}<br>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="margin-left:750px ; margin-top: -600px">
+  <h1 mat-dialog-title>all your groups</h1>
+  <div mat-dialog-content>
+     <div *ngFor = "let i of data.groups">
+       ID :{{i.id}}<br>
+        total_members :{{i.total_members}}<br>
+        name : {{i.name}}<br>
+       
+       <input type="checkbox"  (change)="addgroups($event , i.id)">
+      <hr>
+    </div>  
+  </div>
+  <h1 mat-dialog-title>all your followers</h1>
+  
+  
+  <div mat-dialog-content>
+      <div *ngFor = "let i of data.followers">
+        ID of follower :{{i.id}}<br>
+        Username :{{i.username}}<br>
+
+         <!-- <div *ngIf="i.user_name_for_profile.profile_photo !== null">
+       <img [src]= "i.user_name_for_profile.profile_photo" class="img-thumbnail" height="100px" width="100px" >
+
+         </div> -->
+        
+        <input type="checkbox"  (change)="adduser($event , i.id)">
+       <hr>
+     </div>  
+   </div>
+   <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]=" share_with_both" >Share </button>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+  </div>
+  </div>
+
+
+  
+
+
+
+
+

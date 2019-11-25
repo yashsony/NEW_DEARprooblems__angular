@@ -1,0 +1,32 @@
+<div class="container " style="margin-top :200px;">
+  <button (click)="logout()">logout</button>
+
+
+
+<br>
+<hr>
+
+
+
+<form [formGroup]="groupForm" class="login-container" (ngSubmit)="formakegroup()">
+    
+
+  <input type="text" placeholder="name of group" formControlName="name">
+
+  <input type="submit" value="make group">
+
+</form>
+
+</div>
+
+<br><br>
+<br><br>
+<br><br>
+
+<div class="form-group">
+  <label for="file">Choose File</label>
+  <input type="file"
+         id="file"
+         (change)="handleFileInput($event)">
+         <button (click)="uploadFileToActivity()">upload</button>
+</div>

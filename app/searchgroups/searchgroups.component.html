@@ -1,0 +1,13 @@
+<div class="container">
+<h2>ALL GROUPS</h2>
+<i>press enter for search</i><br>
+<input #box (keyup.enter)="h(box.value)" placeholder="type here"> 
+<button (click)="h(box.value)">search</button>
+<hr><hr>
+<ul >
+  <li *ngFor="let hero of group" >
+    <app-specificgroup [mid]="hero"></app-specificgroup>
+    <hr> </li>
+ 
+</ul>
+</div>
